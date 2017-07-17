@@ -19,6 +19,8 @@
 		9BB219A11F1D040000E645E4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB219A01F1D040000E645E4 /* InterfaceController.swift */; };
 		9BB219A31F1D040000E645E4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB219A21F1D040000E645E4 /* ExtensionDelegate.swift */; };
 		9BB219A51F1D040000E645E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219A41F1D040000E645E4 /* Assets.xcassets */; };
+		9BB219B61F1D0A0C00E645E4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219B51F1D0A0C00E645E4 /* logo.png */; };
+		9BB219B81F1D0C7D00E645E4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB219B71F1D0C7D00E645E4 /* Shared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		9BB219A21F1D040000E645E4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9BB219A41F1D040000E645E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BB219A61F1D040000E645E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BB219B51F1D0A0C00E645E4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9BB219B71F1D0C7D00E645E4 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +127,10 @@
 		9BB2197C1F1D03FF00E645E4 /* igMadWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				9BB219B41F1D09E000E645E4 /* images */,
 				9BB2197D1F1D03FF00E645E4 /* AppDelegate.swift */,
 				9BB2197F1F1D03FF00E645E4 /* ViewController.swift */,
+				9BB219B71F1D0C7D00E645E4 /* Shared.swift */,
 				9BB219811F1D03FF00E645E4 /* Main.storyboard */,
 				9BB219841F1D03FF00E645E4 /* Assets.xcassets */,
 				9BB219861F1D03FF00E645E4 /* LaunchScreen.storyboard */,
@@ -152,6 +158,14 @@
 				9BB219A61F1D040000E645E4 /* Info.plist */,
 			);
 			path = "igMadWorkout WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9BB219B41F1D09E000E645E4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9BB219B51F1D0A0C00E645E4 /* logo.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB219B61F1D0A0C00E645E4 /* logo.png in Resources */,
 				9BB219881F1D03FF00E645E4 /* LaunchScreen.storyboard in Resources */,
 				9BB219851F1D03FF00E645E4 /* Assets.xcassets in Resources */,
 				9BB219831F1D03FF00E645E4 /* Main.storyboard in Resources */,
@@ -289,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB219B81F1D0C7D00E645E4 /* Shared.swift in Sources */,
 				9BB219801F1D03FF00E645E4 /* ViewController.swift in Sources */,
 				9BB2197E1F1D03FF00E645E4 /* AppDelegate.swift in Sources */,
 			);
