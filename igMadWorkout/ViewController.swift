@@ -2,7 +2,7 @@
 import UIKit
 import WatchConnectivity
 // ============================
-class ViewController: UIViewController, WCSessionDelegate{
+class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
     // ============================
     @IBOutlet weak var theDatePicker: UIDatePicker!
     @IBOutlet weak var thePickerView: UIPickerView!
@@ -61,15 +61,15 @@ class ViewController: UIViewController, WCSessionDelegate{
     func session(_ session: WCSession,
                  activationDidCompleteWith activationState: WCSessionActivationState,
                  error: Error?){
-        print("Print Something")
+        print("Activation complete")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession){
-        print("Print Something")
+        print("Session inactive")
     }
     
     func sessionDidDeactivate( _ session: WCSession){
-        print("Print Something")
+        print("Session desactiver")
     }
     //--
     
@@ -138,13 +138,15 @@ class ViewController: UIViewController, WCSessionDelegate{
         return true
     }
     // ============================
-    func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int
-    {
+    //methodes pour choix entrainement
+    // ============================
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {  //*** numberOfComponentsInPickerView
         return 1
     }
     // ============================
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
+     @objc(pickerView:viewForRow:forComponent:reusingView:) func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
     {
+       
         let pickerLabel = UILabel()
         var anArrayOfString = ["- CHOOSE EXERCISE -"]
         
@@ -158,18 +160,15 @@ class ViewController: UIViewController, WCSessionDelegate{
             anArrayOfString.append(tempStr)
         }
         
-        let titleData = anArrayOfString[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Caviar Dreams", size: 18.0)!,
-                                                                         NSForegroundColorAttributeName:UIColor.white])
-        pickerLabel.textAlignment = NSTextAlignment.center
-        pickerLabel.attributedText = myTitle
+       let titleData = anArrayOfString[row]
+        pickerLabel.text = titleData
         
         return pickerLabel
     }
     // ============================
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return self.exerciseAccountability.count;
+        return exerciseAccountability.count;   //*** self.exercise....
     }
     // ============================
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
@@ -187,6 +186,8 @@ class ViewController: UIViewController, WCSessionDelegate{
         
         self.theExercise = anArrayOfString[row]
     }
+    // ============================
+    //methodes pour choix date
     // ============================
     func datePickerChanged(_ datePicker:UIDatePicker) -> String
     {
