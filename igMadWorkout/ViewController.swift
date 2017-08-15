@@ -21,8 +21,9 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
     // ============================
     override func viewDidLoad()
     {
+        //----------
         super.viewDidLoad()
-        
+        //----------
         if WCSession.isSupported()
         {
             session = WCSession.default()
@@ -58,25 +59,33 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         }
     }
     
-    func session(_ session: WCSession,
-                 activationDidCompleteWith activationState: WCSessionActivationState,
-                 error: Error?){
+    // ============================
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void){
+        DispatchQueue.main.async { () -> Void in}
         print("Activation complete")
     }
-    
-    func sessionDidBecomeInactive(_ session: WCSession){
+    // ============================
+    @available(iOS 9.3, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //..
+    }
+    // ============================
+    @available(iOS 9.3, *)
+    public func sessionDidBecomeInactive(_ session: WCSession){
         print("Session inactive")
     }
-    
-    func sessionDidDeactivate( _ session: WCSession){
+    // ============================
+    @available(iOS 9.3, *)
+    public func sessionDidDeactivate( _ session: WCSession){
         print("Session desactiver")
     }
-    //--
+   // ============================
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
+
     // ============================
     @IBAction func saveToClipboard(_ sender: UIButton)
     {
@@ -86,15 +95,29 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {
-        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
-        session.sendMessage(databaseToSendToWatch, replyHandler:
-            { replyMessage in },
-                            errorHandler:
-            {
-                error in
+        //let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
+        //session.sendMessage(databaseToSendToWatch, replyHandler:
+          //  { replyMessage in },
+            //                errorHandler:
+            //{
+              //  error in
                 // catch any errors here
-                print(error)
-        })
+                //print(error)
+        //})
+        
+        var dictToSendWach: [String : String] = [:]
+        
+        for aWorkout in Shared.sharedInstance.theDatabase {
+            let aDate = aWorkout.0
+            let exercises = aWorkout.1
+            var str = ""
+            for i in 0..<exercises.count {
+                let exerc = Array(exercises[i].keys)[0]
+                str += "\(exercises[i][exerc]!)\n"
+            }
+            dictToSendWach[aDate] = str
+        }
+        sendMessage(aDict: dictToSendWach)
     }
     // ============================
     @IBAction func doneButton(_ sender: UIButton)
@@ -140,7 +163,8 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
     // ============================
     //methodes pour choix entrainement
     // ============================
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {  //*** numberOfComponentsInPickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
         return 1
     }
     // ============================
@@ -162,6 +186,7 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         
        let titleData = anArrayOfString[row]
         pickerLabel.text = titleData
+        pickerLabel.textAlignment = NSTextAlignment.center
         
         return pickerLabel
     }
@@ -282,7 +307,23 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         return strForDisplay
     }
     // ============================
+    func sendMessage(aDict: [String : String]) {
+        //----------
+        let messageToSend = ["Message" : aDict]
+        //----------
+        session.sendMessage(messageToSend, replyHandler: { (replyMessage) in
+            //----------
+            DispatchQueue.main.async(execute: { () -> Void in
+            })
+            //----------
+        }) { (error) in
+            print("error: \(error.localizedDescription)")
+        }
+        //----------
+    }
+    //----------------------------------------
 }
+
 
 extension Date
 {

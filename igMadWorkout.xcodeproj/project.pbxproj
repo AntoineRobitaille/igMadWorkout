@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6867851F433DEC00CA22D3 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6867841F433DEC00CA22D3 /* WorkoutsView.swift */; };
+		9B6867871F433E2000CA22D3 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6867861F433E2000CA22D3 /* InfoView.swift */; };
+		9B6867891F433E4700CA22D3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6867881F433E4700CA22D3 /* EditView.swift */; };
+		9B68678B1F433E9800CA22D3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68678A1F433E9800CA22D3 /* TableViewController.swift */; };
+		9B68678D1F4341AA00CA22D3 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68678C1F4341AA00CA22D3 /* TableRowController.swift */; };
+		9B68678F1F4343A900CA22D3 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68678E1F4343A900CA22D3 /* WorkoutController.swift */; };
+		9B6867911F4350BD00CA22D3 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6867901F4350BD00CA22D3 /* CaviarDreams_Bold.ttf */; };
 		9BB2197E1F1D03FF00E645E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2197D1F1D03FF00E645E4 /* AppDelegate.swift */; };
 		9BB219801F1D03FF00E645E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2197F1F1D03FF00E645E4 /* ViewController.swift */; };
 		9BB219831F1D03FF00E645E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219811F1D03FF00E645E4 /* Main.storyboard */; };
@@ -66,6 +73,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B6867841F433DEC00CA22D3 /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		9B6867861F433E2000CA22D3 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		9B6867881F433E4700CA22D3 /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		9B68678A1F433E9800CA22D3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9B68678C1F4341AA00CA22D3 /* TableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		9B68678E1F4343A900CA22D3 /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		9B6867901F4350BD00CA22D3 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
 		9BB2197A1F1D03FF00E645E4 /* igMadWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igMadWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB2197D1F1D03FF00E645E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB2197F1F1D03FF00E645E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +144,11 @@
 				9BB219B41F1D09E000E645E4 /* images */,
 				9BB2197D1F1D03FF00E645E4 /* AppDelegate.swift */,
 				9BB2197F1F1D03FF00E645E4 /* ViewController.swift */,
+				9B6867841F433DEC00CA22D3 /* WorkoutsView.swift */,
+				9B6867861F433E2000CA22D3 /* InfoView.swift */,
+				9B6867881F433E4700CA22D3 /* EditView.swift */,
 				9BB219B71F1D0C7D00E645E4 /* Shared.swift */,
+				9B68678A1F433E9800CA22D3 /* TableViewController.swift */,
 				9BB219811F1D03FF00E645E4 /* Main.storyboard */,
 				9BB219841F1D03FF00E645E4 /* Assets.xcassets */,
 				9BB219861F1D03FF00E645E4 /* LaunchScreen.storyboard */,
@@ -156,6 +174,8 @@
 				9BB219A21F1D040000E645E4 /* ExtensionDelegate.swift */,
 				9BB219A41F1D040000E645E4 /* Assets.xcassets */,
 				9BB219A61F1D040000E645E4 /* Info.plist */,
+				9B68678C1F4341AA00CA22D3 /* TableRowController.swift */,
+				9B68678E1F4343A900CA22D3 /* WorkoutController.swift */,
 			);
 			path = "igMadWorkout WatchKit Extension";
 			sourceTree = "<group>";
@@ -163,6 +183,7 @@
 		9BB219B41F1D09E000E645E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9B6867901F4350BD00CA22D3 /* CaviarDreams_Bold.ttf */,
 				9BB219B51F1D0A0C00E645E4 /* logo.png */,
 			);
 			name = images;
@@ -275,6 +296,7 @@
 			files = (
 				9BB219B61F1D0A0C00E645E4 /* logo.png in Resources */,
 				9BB219881F1D03FF00E645E4 /* LaunchScreen.storyboard in Resources */,
+				9B6867911F4350BD00CA22D3 /* CaviarDreams_Bold.ttf in Resources */,
 				9BB219851F1D03FF00E645E4 /* Assets.xcassets in Resources */,
 				9BB219831F1D03FF00E645E4 /* Main.storyboard in Resources */,
 			);
@@ -305,7 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB219B81F1D0C7D00E645E4 /* Shared.swift in Sources */,
+				9B68678B1F433E9800CA22D3 /* TableViewController.swift in Sources */,
 				9BB219801F1D03FF00E645E4 /* ViewController.swift in Sources */,
+				9B6867891F433E4700CA22D3 /* EditView.swift in Sources */,
+				9B6867851F433DEC00CA22D3 /* WorkoutsView.swift in Sources */,
+				9B6867871F433E2000CA22D3 /* InfoView.swift in Sources */,
 				9BB2197E1F1D03FF00E645E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB219A31F1D040000E645E4 /* ExtensionDelegate.swift in Sources */,
+				9B68678F1F4343A900CA22D3 /* WorkoutController.swift in Sources */,
+				9B68678D1F4341AA00CA22D3 /* TableRowController.swift in Sources */,
 				9BB219A11F1D040000E645E4 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +592,7 @@
 				9BB219AB1F1D040000E645E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BB219AD1F1D040000E645E4 /* Build configuration list for PBXNativeTarget "igMadWorkout WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +601,7 @@
 				9BB219AF1F1D040000E645E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BB219B11F1D040000E645E4 /* Build configuration list for PBXNativeTarget "igMadWorkout" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +610,7 @@
 				9BB219B31F1D040000E645E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
