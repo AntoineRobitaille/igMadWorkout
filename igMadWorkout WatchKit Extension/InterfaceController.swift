@@ -71,6 +71,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             UserDefaults.standard.set(self.data, forKey: "data")
             self.dates = Array(value!.keys)
             self.workouts = Array(value!.values)
+            print(self.workouts)
             self.tableRefresh()
         }
         //----------

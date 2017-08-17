@@ -30,10 +30,10 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
             session!.delegate = self
             session!.activate()
             
-            if !session.isPaired
-            {
-                self.theSynchButton.alpha = 0.0
-            }
+//            if !session.isPaired
+//            {
+//                self.theSynchButton.alpha = 0.0
+//            }
         }
         
         self.theExercise = ""
@@ -106,14 +106,15 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         //})
         
         var dictToSendWach: [String : String] = [:]
-        
+
         for aWorkout in Shared.sharedInstance.theDatabase {
             let aDate = aWorkout.0
             let exercises = aWorkout.1
+            print(exercises)
             var str = ""
             for i in 0..<exercises.count {
                 let exerc = Array(exercises[i].keys)[0]
-                str += "\(exercises[i][exerc]!)\n"
+                str += "\(exerc) : \(exercises[i][exerc]!)\n"
             }
             dictToSendWach[aDate] = str
         }

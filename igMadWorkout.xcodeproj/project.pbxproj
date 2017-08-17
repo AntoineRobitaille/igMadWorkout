@@ -14,6 +14,8 @@
 		9B68678D1F4341AA00CA22D3 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68678C1F4341AA00CA22D3 /* TableRowController.swift */; };
 		9B68678F1F4343A900CA22D3 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68678E1F4343A900CA22D3 /* WorkoutController.swift */; };
 		9B6867911F4350BD00CA22D3 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6867901F4350BD00CA22D3 /* CaviarDreams_Bold.ttf */; };
+		9B6867921F45E56700CA22D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219B51F1D0A0C00E645E4 /* logo.png */; };
+		9B6867931F45E56700CA22D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219B51F1D0A0C00E645E4 /* logo.png */; };
 		9BB2197E1F1D03FF00E645E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2197D1F1D03FF00E645E4 /* AppDelegate.swift */; };
 		9BB219801F1D03FF00E645E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2197F1F1D03FF00E645E4 /* ViewController.swift */; };
 		9BB219831F1D03FF00E645E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB219811F1D03FF00E645E4 /* Main.storyboard */; };
@@ -308,6 +310,7 @@
 			files = (
 				9BB219951F1D040000E645E4 /* Assets.xcassets in Resources */,
 				9BB219931F1D040000E645E4 /* Interface.storyboard in Resources */,
+				9B6867921F45E56700CA22D3 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6867931F45E56700CA22D3 /* logo.png in Resources */,
 				9BB219A51F1D040000E645E4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
